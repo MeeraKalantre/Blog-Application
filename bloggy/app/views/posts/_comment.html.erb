@@ -1,0 +1,13 @@
+<%= div_for comment do %>
+  <h3>
+    <%= comment.name %> &lt;<%= comment.email %>&gt; said:
+     <span class='actions'>
+     <%= link_to 'Delete', [@post,comment], :confirm => 'Are you sure?', :method => :delete %>
+
+<!--     <%= link_to 'Delete', post_comment_path(:post_id => @post,
+      :id => comment), :confirm => 'Are you sure?', :method => :delete %>-->
+     </span>
+  </h3>
+ <%= comment.body %>
+ <% end %>
+
